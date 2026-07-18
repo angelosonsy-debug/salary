@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --font-main: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+
+  /* Light theme (default) — warm paper + deep military navy/olive ink */
+  --bg: #f4f2ec;
+  --bg-elevated: #ffffff;
+  --bg-soft: #eae7dc;
+  --ink: #22301f;
+  --ink-soft: #5b6353;
+  --accent: #5c6b3f;       /* olive — primary accent */
+  --accent-strong: #3e4a2a;
+  --gold: #a8791f;         /* insignia gold — used for totals/highlights */
+  --border: #d8d3c3;
+  --success: #3e6b4f;
+  --warning: #a8791f;
+  --danger: #9c3b2e;
+  --shadow: 0 1px 3px rgba(34, 48, 31, 0.08), 0 1px 2px rgba(34, 48, 31, 0.06);
+  --radius: 10px;
+}
+
+[data-theme='dark'] {
+  --bg: #141a12;
+  --bg-elevated: #1c2418;
+  --bg-soft: #232b1d;
+  --ink: #e9e7dc;
+  --ink-soft: #a6ab99;
+  --accent: #8a9a5b;
+  --accent-strong: #a8b877;
+  --gold: #d1a83d;
+  --border: #2e371f;
+  --success: #7fb894;
+  --warning: #d1a83d;
+  --danger: #d9776a;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--ink);
+  direction: rtl;
+  transition: background 0.25s ease, color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100vh; }
+button { font-family: var(--font-main); cursor: pointer; }
+::selection { background: var(--accent); color: #fff; }
+table { border-collapse: collapse; width: 100%; }
+.mono-num { font-variant-numeric: tabular-nums; letter-spacing: 0.2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
